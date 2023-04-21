@@ -21,7 +21,7 @@ const ThemeContainer = (props: Props) => {
   const isDarkModeActive = useSelector(isDarkThemeActive);
 
   return (
-    <div data-theme={isDarkModeActive ? "dark" : "light"}>
+    <div data-theme={isDarkModeActive ? "black" : "light"}>
         {props.children}
     </div>
   )
