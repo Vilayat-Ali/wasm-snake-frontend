@@ -5,7 +5,7 @@ export interface IGame {
     score: number
 }
 
-const initialState = {
+const initialState: IGame = {
     isPaused: true,
     score: 0
 }

@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {rootReducers} from "@/redux/slices";
-import { useDispatch } from "react-redux";
+import { useDispatch }from "react-redux";
 
 export const store = configureStore({
     reducer: rootReducers
