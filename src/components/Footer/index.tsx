@@ -1,9 +1,10 @@
-import type {FC} from "react";
-import moment from "moment";
+import type { NextPage } from 'next';
+import moment from 'moment';
 
-type Props = {}
+interface Props {}
 
-const Footer: FC = (props: Props) => {
+const Footer: NextPage<Props> = () => {
+
   return (
     <footer className="footer footer-center p-4 bg-base-300 text-base-content">
       <div>

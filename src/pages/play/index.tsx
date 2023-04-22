@@ -1,4 +1,5 @@
 import { ReactNode, useId } from "react"
+import dynamic from "next/dynamic";
 
 import Score from "@/components/drawar/Score";
 import DrawarCard from "@/components/cards/DrawarCard";

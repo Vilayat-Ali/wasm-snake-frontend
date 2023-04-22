@@ -41,7 +41,7 @@ const Navbar: FC = () => {
         <ul className="menu menu-horizontal px-1">
           {
             ITEMS.map((items: ITEM_TYPE) => (
-              <li key={id}>
+              <li key={items.title}>
                 <Link href={items.href}>
                   {items.title}
                 </Link>
