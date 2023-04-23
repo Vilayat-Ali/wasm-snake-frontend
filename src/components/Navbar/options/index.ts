@@ -14,6 +14,6 @@ export const ITEMS: ITEM_TYPE[] = [
     },    
     {  
         title: "Dev Log",
-        href: "/"
+        href: "/dev-log"
     },
 ];

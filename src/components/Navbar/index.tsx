@@ -52,7 +52,7 @@ const Navbar: FC = () => {
       </div>
       <div className="navbar-end">
         <input type="checkbox" className="toggle mr-5" onChange={changeTheme} />
-        <a className="btn" href="https://www.github.com/Vilayat-Ali/wasm-snake-frontend">
+        <a className="btn btn-black" href="https://www.github.com/Vilayat-Ali/wasm-snake-frontend">
           <div className="flex flex-row items-center justify-around">
             <BsGithub style={{fontSize: '1.5rem'}} />
             <p className="ml-3">Github</p>
