@@ -6,7 +6,7 @@ interface Props {}
 const Footer: NextPage<Props> = () => {
 
   return (
-    <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+    <footer className="footer footer-center p-4 bg-neutral-focus text-base-content text-white">
       <div>
         <p>Copyright © {moment().format('YYYY')} - Created with React, WASM & ❤️ by <a href="https://www.github.com/Vilayat-Ali">Vilayat</a></p>
       </div>

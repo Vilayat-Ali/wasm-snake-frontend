@@ -6,8 +6,8 @@ const Score = () => {
 
   return (
     <div className="flex flex-col items-center justify-center my-1">
-      <h2 className="text-2xl text-bold">Score</h2>
-      <h4 className="text-xl text-base-700">{gameState.score}</h4>
+      <h2 className="text-2xl text-bold">Level {gameState.level.current_level}</h2>
+      <div className="radial-progress text-green-700 mt-5" style={{"--value": gameState.level.percent_passed}}>{gameState.level.percent_passed}%</div>
     </div>
   )
 }
