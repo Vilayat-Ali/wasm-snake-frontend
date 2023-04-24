@@ -15,6 +15,7 @@ import { IGame, getGameState } from "@/redux/slices/game.slice";
 
 import wasm_snake from "@/pkg/wasm_snake";
 import FieldSize from "@/components/drawar/FieldSize";
+import Snake from "@/components/drawar/Snake";
 
 // icons
 import type { IconType } from "react-icons";
@@ -61,7 +62,7 @@ const drawarMenu: drawarMenuItemType[] = [
         </DrawarCard>
 
         <DrawarCard>
-          <Score />
+          <Snake />
         </DrawarCard>
 
         <DrawarCard>
