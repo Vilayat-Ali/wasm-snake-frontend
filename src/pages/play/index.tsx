@@ -5,13 +5,16 @@ import Script from "next/script";
 import Score from "@/components/drawar/Score";
 import Level from "@/components/drawar/Level";
 import DrawarCard from "@/components/cards/DrawarCard";
+import SnakeLength from "@/components/drawar/SnakeLength";
 import {useSeriesToggle} from "@/hooks/useToggle"
+import Loader from "@/components/Loader";
 
 import { useDispatch, useSelector } from "react-redux";
 import { updateFieldSizeRows, updateFieldSizeCols } from "@/redux/slices/game.slice";
 import { IGame, getGameState } from "@/redux/slices/game.slice";
 
 import wasm_snake from "@/pkg/wasm_snake";
+import FieldSize from "@/components/drawar/FieldSize";
 
 // icons
 import type { IconType } from "react-icons";
@@ -34,20 +37,57 @@ const drawarMenu: drawarMenuItemType[] = [
     title: "Level & Score",
     component: (
       <>
+      <DrawarCard>
         <Level />
+      </DrawarCard>
+
+      <DrawarCard>
         <Score />
+      </DrawarCard>
+
+      <DrawarCard>
+        <SnakeLength />
+      </DrawarCard>
       </>
     )
   },
   {
     icons: BsFillGearFill,
     title: "Game Settings",
-    component: <Score />
+    component: (
+      <>
+        <DrawarCard>
+          <FieldSize />
+        </DrawarCard>
+
+        <DrawarCard>
+          <Score />
+        </DrawarCard>
+
+        <DrawarCard>
+          <SnakeLength />
+        </DrawarCard>
+      </>
+      )
   },
   {
     icons: VscInspect,
     title: "Inspect",
-    component: <Score />
+    component: (
+      <>
+        <DrawarCard>
+          <Level />
+        </DrawarCard>
+
+        <DrawarCard>
+          <Score />
+        </DrawarCard>
+
+        <DrawarCard>
+          <SnakeLength />
+        </DrawarCard>
+      </>
+      )
   }
 ];
 
@@ -60,7 +100,7 @@ const Play = (props: Props) => {
   const seriesToggler = useSeriesToggle(drawarMenu.length);
 
   return (
-    <>
+    <Loader>
     <div className="drawer drawer-mobile w-90 overflow-hidden" style={{height: "88vh"}}>
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col justify-center items-center">
@@ -85,9 +125,9 @@ const Play = (props: Props) => {
             <li key={id_item} className="my-2">
               <a onClick={seriesToggler[index][1]}><menuItem.icons className="text-3xl" />{menuItem.title}</a> 
               {seriesToggler[index][0] && (
-                <DrawarCard>
+                <>
                   {menuItem.component}
-                </DrawarCard>
+                </>
                 )
               }
             </li>
@@ -97,7 +137,7 @@ const Play = (props: Props) => {
       
       </div>
     </div>
-    </>
+    </Loader>
   )
 }
 

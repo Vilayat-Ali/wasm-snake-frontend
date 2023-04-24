@@ -13,6 +13,10 @@ import { isDarkThemeActive } from '@/redux/slices/app.slice'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
+// react toastify
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
+
 type Props = {
   children: ReactNode
 }
@@ -34,7 +38,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <Navbar />
           <Component {...pageProps} />
         <Footer />
-        </ThemeContainer>
+      </ThemeContainer>
+      <ToastContainer />
     </Provider>
   )
 }
