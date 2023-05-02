@@ -34,8 +34,8 @@ const Snake = () => {
     }
 
   return (
-    <div className="w-auto">
-        <div className="form-control w-auto">
+    <div className="">
+        <div className="form-control ">
             <label className="label">
                 <span className="label-text">Enter Snake Color</span>
             </label>
@@ -44,20 +44,20 @@ const Snake = () => {
                     e.preventDefault();
                     updateSnakeColor(e);
                 }} />
-                <span>Boxes</span>
+                <span>HEX</span>
             </label>
         </div>
-
-        <div className="form-control w-auto">
+        <br />
+        <div className="form-control ">
         <label className="label">
-            <span className="label-text">Enter Field Size</span>
+            <span className="label-text">Enter Field Color</span>
         </label>
         <label className="input-group">
             <input type="color" placeholder="#000000" className="input input-bordered" onChange={(e: any) => {
                 e.preventDefault();
                 updateFieldColor(e);
             }} />
-            <span>Boxes</span>
+            <span>HEX</span>
         </label>
         </div>
     </div>

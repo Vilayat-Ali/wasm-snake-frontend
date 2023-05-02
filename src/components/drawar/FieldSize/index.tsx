@@ -38,26 +38,26 @@ const FieldSize = () => {
     }
 
   return (
-    <div className="w-auto">
-        <div className="form-control w-auto">
+    <div className="container">
+        <div className="form-control">
         <label className="label">
             <span className="label-text">Enter Row Size</span>
         </label>
         <label className="input-group">
-            <input type="text" placeholder="0.01" className="input input-bordered" onChange={(e: any) => {
+            <input type="text" placeholder="0.01" className="input input-bordered" style={{width: '50%'}} onChange={(e: any) => {
                 e.preventDefault();
                 updateFieldSize(Feature.row, e.target.value);
             }} />
             <span>Boxes</span>
         </label>
         </div>
-
-        <div className="form-control w-auto">
+        <br/>
+        <div className="form-control">
         <label className="label">
             <span className="label-text">Enter Col Size</span>
         </label>
         <label className="input-group">
-            <input type="text" placeholder="0.01" className="input input-bordered" onChange={(e: any) => {
+            <input type="text" placeholder="0.01" className="input input-bordered" style={{width: '50%'}} onChange={(e: any) => {
                 e.preventDefault();
                 updateFieldSize(Feature.col, e.target.value);
             }} />
