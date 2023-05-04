@@ -130,7 +130,6 @@ const Play = (props: Props) => {
           ))
         }
         </ul>
-      
       </div>
     </div>
     </Loader>

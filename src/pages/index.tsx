@@ -1,15 +1,16 @@
-type Props = {}
+// lib
+import type { NextPage } from "next"
 
-const index = (props: Props) => {
+const index: NextPage = () => {
   return (
     <>
-    <div className="hero min-h-screen" style={{ backgroundImage: `url("https://www.github.com/vilayat-ali.png")` }}>
-      <div className="hero-overlay bg-opacity-60"></div>
+    <div className="hero min-h-screen" style={{ backgroundImage: `url("/home.png")` }}>
+      <div className="hero-overlay bg-opacity-30"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-          <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          <button className="btn btn-primary">Get Started</button>
+        <div className="max-w-lg">
+          <h1 className="mb-5 text-5xl font-bold">WASM Snake Game</h1>
+          <p className="mb-5">Control snake [a singly-linked list] from browser using WASM!!</p>
+          <button className="btn btn-primary">Play Now</button>
         </div>
       </div>
     </div>
